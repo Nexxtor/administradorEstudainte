@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.naldana;
 
 import java.util.InputMismatchException;
@@ -34,11 +30,12 @@ public class Menu {
     }
 
     public void mostrar() {
-        int opcion = 4;
+        int opcion;
+        boolean flag=true; //Creamos una bandera para el ciclo while
         Scanner leer = new Scanner(System.in);
         ListaEstudiantes estudiantes = new ListaEstudiantes();
 
-        while (opcion != 3) {
+        while (flag) {
             opciones();
             try {
                 opcion = leer.nextInt();
@@ -52,6 +49,7 @@ public class Menu {
                         break;
                     case 3:
                         System.out.println("Adios :(");
+                        flag=false;
                         break;
                     default:
                         System.out.println("Por favor ingrese una opcion valida");

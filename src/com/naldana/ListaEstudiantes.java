@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.naldana;
 
 import java.util.ArrayList;
@@ -30,7 +26,7 @@ public class ListaEstudiantes {
         System.out.print(": ");
         estudiante.setNombres(leer.nextLine());
         
-        System.out.println("Ingrese los apellids del estudiante");
+        System.out.println("Ingrese los apellidos del estudiante");
         System.out.print(": ");
         estudiante.setApellidos(leer.nextLine());
         
@@ -42,8 +38,8 @@ public class ListaEstudiantes {
     }
     
     public void mostrar() {
-        for ( Estudiante e : estudiantes) {
+        estudiantes.forEach((e) -> {
             System.out.println(e.toString());
-        }
+        });
     }
 }
